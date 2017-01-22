@@ -1,0 +1,13 @@
+The following is a list of known issues in each version of this software:
+
+
+Version 1.0:
+
+- Camera characterization:
+
+	* Clicking on "select sample" creates a new pixel selection handle every time. While this should not be a big issue, it is worth noting that "store sample" will only sample those pixels selected by the last created handle, ignoring any other existing selection handle.
+
+	* Pasting radiance values from an external file throws a button callback error when numbers use a decimal digit separator other than a point.
+
+	Error Message: "Error using reshape"
+
