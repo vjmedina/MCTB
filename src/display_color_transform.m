@@ -1,5 +1,14 @@
 function Iout = display_color_transform (Iin, display_model_data)
-
+%DISPLAY_COLOR_TRANSFORM - Multiply an 3-channel image array given as input to a display
+%                          and estimates the corresponding output image for that display
+%                          given its characterization model data.
+%
+% IOUT = DISPLAY_COLOR_TRANSFORM(IIN, DISPLAY_MODEL_DATA)
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%   
 [sx, sy, sz] = size(Iin);
 Xr = Iin(:,:,1);
 Xg = Iin(:,:,2);

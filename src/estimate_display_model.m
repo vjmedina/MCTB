@@ -1,5 +1,15 @@
 function [params, R2] = estimate_display_model (X, Y, model)
-
+%ESTIMATE_DISPLAY_MODEL - Given a series of corresponding input(Y) and output(X) data, 
+%                         and a specific characterization model, this function estimates
+%                         the neccesary parameters for the model, as well as the corresponding
+%                         goodness of fit parameter, R2.
+%
+% [PARAMS, R2] = ESTIMATE_DISPLAY_MODEL(X, Y, MODEL)
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%   
     warning('off', 'curvefit:fit:noStartPoint');
     
     if (nargin < 1)

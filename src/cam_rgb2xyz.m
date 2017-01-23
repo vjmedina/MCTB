@@ -1,5 +1,15 @@
 function Ixyz = cam_rgb2xyz (Irgb_cam, Mcam)  
-    
+%CAM_RGB2XYZ - Multiplies a camera image, expressed in the camera's local 
+%              RGB color space, by the camera's inverse transform matrix, 
+%              to convert the pixel values to device-independent XYZ values.
+%
+% IXYZ = CAM_RGB2XYZ(IRGB_CAM, MCAM)
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%
+%    
     [sx, sy, sz] = size(Irgb_cam);
     
     % Extract each color channel.    

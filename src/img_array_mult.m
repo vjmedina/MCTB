@@ -1,5 +1,13 @@
 function I2 = img_array_mult (I, M)
-    
+%IMG_ARRAY_MULT - Multiply an 3-channel image array and multiplies 
+%                 it by some given conversion matrix, M.
+%
+% I2 = IMG_ARRAY_MULT(I, M)
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%   
     [sx, sy, sz] = size(I);
     
     % Extract each color channel.    

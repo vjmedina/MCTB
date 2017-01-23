@@ -1,5 +1,15 @@
 function Irgb = disp_xyz2rgb (Ixyz_disp, Mdisp)  
-    
+%DISP_XYZ2RGB - Converts a series of XYZ output values measured on the screen 
+%              of a display, by multiplying them by the display's transform 
+%              matrix.
+%
+% IRGB = DISP_XYZ2RGB(IXYZ_DISP, MCAM)
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%
+%    
     [sx, sy, sz] = size(Ixyz_disp);
     
     % Extract each color channel.    

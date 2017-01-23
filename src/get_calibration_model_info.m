@@ -1,4 +1,15 @@
 function [info] = get_calibration_model_info (model)
+%GET_CALIBRATION_MODEL_INFO - Given a display characterization model id number,
+%                             as defined in the MCTB toolbox, this function creates 
+%                             and returns a data structures containing all the neccesary
+%                             data relative to the given model.
+%
+% INFO = GET_CALIBRATION_MODEL_INFO(MODEL)
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%   
     % Define the equations for each model
     % Forward models
     GOG = '(a*x+b)^m';
