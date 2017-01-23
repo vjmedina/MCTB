@@ -1,4 +1,13 @@
 classdef ColorUtils
+%# COLORUTILS - This class defines a series of functions and variables which 
+%#              are useful for working with color data structures defined in
+%#              the CSToolBox.
+%#
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%    
     properties (Constant)
         % Color Space IDs
         COLOR_SPACE_XYZ = 1;

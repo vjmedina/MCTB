@@ -1,4 +1,13 @@
 classdef ColorProfile < ColorSet
+%# COLORPROFILE - This class, which inherits from ColorSet, defines a specific type
+%#                of color set where all the colors define a profile for output or input
+%#                device, such as a camera, display, or scanner. It also defines common
+%#                operations to work with color profiles.
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%  
     properties
         PRIM  % ColorData Array with 3 elements. 
         W     % ColorData

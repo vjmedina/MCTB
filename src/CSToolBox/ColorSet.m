@@ -1,4 +1,12 @@
 classdef ColorSet
+%# COLORSET - This class defines an interface for working with color sets.
+%#            It consists of a list of colors, defined as type ColorData,
+%#            and a series of common operation with color sets.
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%  
     properties
         Colors % List colors associated with the color set.
         num_colors

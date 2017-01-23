@@ -1,12 +1,15 @@
-
-%# This class stores a color stimulus and all its associated properties 
+classdef ColorData
+%# COLORDATA - This class stores a color stimulus and all its associated properties 
 %# into one single object, reducing the amount of variables in the 
 %# workspace and grouping all the color information for a single stimulus. 
 %# At the same time, it allows to perform different typical operations with 
 %# color data, such as color space conversions, chromatic adaptations or 
 %# color analysis.
-
-classdef ColorData
+%
+%Author: Victor Medina Heierle
+%Last update: 23-Jan-2017
+%
+%    
     properties (Access = private)
         % Current set of Space-independent tristimulus values in use (in the XYZ colorspace)
         TV_XYZ        
