@@ -409,6 +409,14 @@ calib_data = struct('model',model,'red_rgb_in',zeros(26,3),'red_xyz_out',zeros(2
                     'blue_rgb_in',zeros(26,3),'blue_xyz_out',zeros(26,3),'blue_rgb_out',zeros(26,3),...
                     'blue_rgb_estim',zeros(26,3),'blue_params',params,'blue_R2',0,...
                     'Mrgb2xyz',zeros(3,3),'Mxyz2rgb',zeros(3,3));
+                
+calib_data = struct('model',model,'red_rgb_in',zeros(26,3),'red_xyz_out',zeros(26,3),'red_rgb_out',zeros(26,3),...
+                    'red_rgb_estim',zeros(26,3),'red_params',params,'red_R2',0,...
+                    'green_rgb_in',zeros(26,3),'green_xyz_out',zeros(26,3),'green_rgb_out',zeros(26,3),...
+                    'green_rgb_estim',zeros(26,3),'green_params',params,'green_R2',0,...
+                    'blue_rgb_in',zeros(26,3),'blue_xyz_out',zeros(26,3),'blue_rgb_out',zeros(26,3),...
+                    'blue_rgb_estim',zeros(26,3),'blue_params',params,'blue_R2',0,...
+                    'Mrgb2xyz',zeros(3,3),'Mxyz2rgb',zeros(3,3));
 
 % Check for data consistency and construct the color transformation matrix.
 channels = {'red', 'green', 'blue'};
@@ -466,9 +474,9 @@ for j=1:size(calib_data.blue_rgb_in,1), calib_data.blue_rgb_out(j,:) = (Mxyz2rgb
 % Since the matrix size is 26 by default, it may give errors if the number
 % of samples is less than 26. In this case, to avoid the errors, we must
 % reduce the number of rows to the correct size.
-if size(calib_data.red_rgb_out,1) > size(calib_data.red_rgb_in,1), calib_data.red_rgb_out(size(calib_data.red_rgb_in,1)+1:26,:)=[]; end
-if size(calib_data.green_rgb_out,1) > size(calib_data.green_rgb_in,1), calib_data.green_rgb_out(size(calib_data.green_rgb_in,1)+1:26,:)=[]; end
-if size(calib_data.blue_rgb_out,1) > size(calib_data.blue_rgb_in,1), calib_data.blue_rgb_out(size(calib_data.blue_rgb_in,1)+1:26,:)=[]; end
+if size(calib_data.red_rgb_out,1) < 26, calib_data.red_rgb_out(size(calib_data.red_rgb_in,1)+1:26)=[]; end
+if size(calib_data.green_rgb_out,1) < 26, calib_data.green_rgb_out(size(calib_data.green_rgb_in,1)+1:26)=[]; end
+if size(calib_data.blue_rgb_out,1) < 26, calib_data.blue_rgb_out(size(calib_data.blue_rgb_in,1)+1:26)=[]; end
 
 % Perform data fitting and estimation for each channel's data.
 
